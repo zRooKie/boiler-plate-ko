@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 5000
 
+// MongoDB Keys
+const config = require('./config/key');
 
 // body-parser를 가져온다
 const bodyParser = require('body-parser');
@@ -16,7 +18,7 @@ app.use(bodyParser.json());
 
 // nodejs Server
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://zrookie:hamer5878@boilerplate.5943o.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))

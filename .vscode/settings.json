@@ -1,4 +1,5 @@
 {
   "editor.fontSize": 15,
-  "editor.fontFamily": "Eco Sans Mono, Menlo, Consolas, 'Courier New', monospace"
+  "editor.fontFamily": "Eco Sans Mono, Menlo, Consolas, 'Courier New', monospace",
+  "editor.tabSize": 2
 }
