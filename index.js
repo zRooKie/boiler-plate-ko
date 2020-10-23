@@ -40,7 +40,6 @@ app.post('/register', (req, res) => {
 
   const user = new User(req.body)
 
-
   user.save((err, userInfo) => {
     if(err) return res.json({success: false, err})  // err일 경우 json식으로 에러 보여줌
 
